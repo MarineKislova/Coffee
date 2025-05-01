@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Merienda:300,regular,500,600,700,800,900&display=swap");
+
+@import "../variables/defaultnullstyle";
+
+[class*="__container"] {
+  max-width: 1440px;
+  margin: 0 auto;
+}

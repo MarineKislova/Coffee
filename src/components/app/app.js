@@ -1,13 +1,14 @@
+import MainNav from '../mainnav/mainnav';
 import CardList from '../card-list/card-list';
 
 import solimoCoffee from '../../assets/images/item1-main.png';
 import prestoCoffee from '../../assets/images/item2-main.png';
 import aromisticoCoffee from '../../assets/images/item3-main.png';
 
-import "./app.css";
+import "./app.scss";
 
 function App() {
-  const cardsList = [
+  const cardsItems = [
     {
       id: 1,
       alt: "solimoCoffee",
@@ -32,14 +33,16 @@ function App() {
   ];
   return (
     <div className="App">
-      <CardList/> 
-      {cardsList.map((card) => (
+      <MainNav /> 
+      <CardList
+      cardsItems = {cardsItems}/> 
+      {/* {cardsItems.map((card) => (
         <div key={card.id} className="card">
           <img src={card.src} alt={card.alt} />
           <h2>{card.title}</h2>
           <p>Price: {card.price} EUR</p>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 }
