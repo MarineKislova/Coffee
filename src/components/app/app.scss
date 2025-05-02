@@ -2,7 +2,12 @@
 
 @import "../variables/defaultnullstyle";
 
+body{
+  background-color: antiquewhite;
+}
+
 [class*="__container"] {
   max-width: 1440px;
   margin: 0 auto;
+  background-color: $backgroundColor;
 }
