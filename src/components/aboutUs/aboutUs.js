@@ -1,8 +1,10 @@
 import Paragraphs from "../data/paragraph";
-import beansLogoBlack from "../../assets/icons/Beans-logo-black.svg";
+
 import "./aboutUs.scss";
 
-const AboutUs = () => {
+const AboutUs = (props) => {
+   const { beansLogoBlack } = props;
+
   return (
     <div className="about-us">
       <div className="about-us__container">
@@ -14,5 +16,7 @@ const AboutUs = () => {
     </div>
   );
 };
+
+
 
 export default AboutUs;

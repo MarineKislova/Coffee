@@ -3,6 +3,4 @@ const navLinks = [
     { id: 2, label: "Our Coffee", href: "#coffee" },
     { id: 3, label: "For your pleasure", href: "#pleasure" },
   ];
-
-  
   export { navLinks };
