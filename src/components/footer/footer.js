@@ -1,5 +1,5 @@
-import { navLinks } from "../data/navData";
-import NavLinks from "../data/navLinks";
+import { navLinks } from "../../data/navData";
+import NavLinks from "../../utils/navLinks";
 
 import beansNavBlack from "../../assets/icons/Beans-nav-black.svg";
 import beansLogoBlack from "../../assets/icons/Beans-logo-black.svg";
@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer__container">
         <div className="footer__inner">
           <a href="/" className="footer__logo-link">
-            <img src={beansNavBlack} alt="Logo"/>
+            <img src={beansNavBlack} alt="Logo" />
           </a>
           <NavLinks
             links={navLinks}

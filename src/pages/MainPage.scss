@@ -1,0 +1,107 @@
+.main-nav {
+  &__container {
+    background-image: url(../assets/images/Main-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    max-height: 640px;
+    color: #fff;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0 200px;
+    gap: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 58px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__logo {
+    width: 22.22vh;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    padding-top: 14.7px;
+  }
+
+  &__btn {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 3px;
+  }
+}
+
+.about-us {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 0 101px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 35px;
+    padding-bottom: 20px;
+  }
+
+  &__logo {
+    padding-bottom: 20px;
+  }
+
+  &__paragraph {
+    width: 590px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.card {
+  &__container {
+    background-image: url(../assets/images/paper-main_1920.png);
+    background-size: cover;
+    background-position: center;
+    height: 495px;
+    padding: 80px 0 110px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    // flex: 0 1 25%;
+    gap: 71px;
+  }
+}

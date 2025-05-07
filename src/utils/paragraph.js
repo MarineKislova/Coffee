@@ -1,4 +1,4 @@
-import { paragraphData } from "./paragraphData";
+import { paragraphData } from "../data/paragraphData";
 
 const Paragraphs = ({ ids = [], className = "" }) => {
   const filteredParagraphs =

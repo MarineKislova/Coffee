@@ -1,6 +1,6 @@
-import solimoCoffee from "../../assets/images/item1-main.png";
-import prestoCoffee from "../../assets/images/item2-main.png";
-import aromisticoCoffee from "../../assets/images/item3-main.png";
+import solimoCoffee from "../assets/images/item1-main.png";
+import prestoCoffee from "../assets/images/item2-main.png";
+import aromisticoCoffee from "../assets/images/item3-main.png";
 
 const cardsItems = [
   {

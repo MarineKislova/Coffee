@@ -1,19 +1,17 @@
-
-
 import "./card-list-item.scss";
 
-
-const CardListItemMain = ({ data, className }) => {
-
+const Card = ({ data, className }) => {
   return (
-    <div className={`card ${className}`}>
+    <div className={className}>
       <img src={data.src} alt={data.alt} className="card__img" />
-      <h3 className="card__title">{data.title}</h3>
-      <p className="card__country">{data.country}</p>
-      <p className="card__description">{data.description}</p>
-      <div className="card__price">${data.price}</div>
+      <h2 className={`${className}__title`}>{data.title}</h2>
+      {data.country && <p className="card__country">{data.country}</p>}
+      {data.description && (
+        <p className="card__description">{data.description}</p>
+      )}
+      <p className={`${className}__price`}>${data.price}</p>
     </div>
   );
 };
 
-export default CardListItemMain;
+export default Card;

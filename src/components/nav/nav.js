@@ -1,6 +1,5 @@
-
-import NavLinks from "../data/navLinks";
-import { navLinks } from "../data/navData";
+import NavLinks from "../../utils/navLinks";
+import { navLinks } from "../../data/navData";
 
 import "./nav.scss";
 
