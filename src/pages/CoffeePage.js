@@ -1,5 +1,5 @@
 // component`
-import Nav from "../components/nav/nav";
+import Header from "../components/header/header";
 import Card from "../components/card-list-item/card-list-item";
 import Footer from "../components/footer/footer";
 // data
@@ -8,23 +8,24 @@ import { cardsItems } from "../data/cardsItemsData";
 import { prepareCardsData } from "../utils/prepareCardsData";
 import Paragraphs from "../utils/paragraph";
 // assets
-import beansLogoWhite from "../assets/icons/Beans-logo-white.svg";
+import coffeeBg from "../assets/images/coffee-shop-bckgd-1920.png";
 import beansLogoBlack from "../assets/icons/Beans-logo-black.svg";
 import aboutBeans from "../assets/images/about-beans-img.png";
 // styles
 import "../pages/CoffeePage.scss";
 
 const CoffeePage = () => {
-  const coffeeCards = prepareCardsData(cardsItems, { omitFields: ["description"] });
+  const coffeeCards = prepareCardsData(cardsItems, {
+    omitFields: ["description"],
+  });
 
   return (
     <>
-      <header className="coffee-header">
-        <div className="coffee-header__container">
-          <Nav />
-          <h2 className="coffee-header__title"> Our Coffee</h2>
-        </div>
-      </header>
+      <Header
+        className={"coffee-header"}
+        background={coffeeBg}
+        title="Our Coffee"
+      />
       <div className="about-beans">
         <div className="about-beans__container">
           <div className="about-beans__body">
@@ -70,12 +71,12 @@ const CoffeePage = () => {
         <div className="coffee-cards__container">
           <div className="coffee-cards__items">
             {coffeeCards.map((card) => (
-              <Card key={card.id} data={card} className="card-item" />
+              <Card key={card.id} data={card} className="coffee-item" classContainer="coffee-item__container" />
             ))}
           </div>
         </div>
       </section>
-      <Footer  />
+      <Footer />
     </>
   );
 };

@@ -61,7 +61,7 @@ const MainPage = () => {
             <h3 className="card__title">Our best</h3>
             <div className="card__items">
               {cards.map((card) => (
-                <Card key={card.id} data={card} className="card-item" />
+                <Card key={card.id} data={card} className="main-item" classContainer="main-item__container" />
               ))}
             </div>
           </div>
