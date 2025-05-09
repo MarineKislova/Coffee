@@ -1,6 +1,7 @@
 // component`
 import Header from "../components/header/header";
 import Card from "../components/card-list-item/card-list-item";
+import About from "../components/about/about";
 import Footer from "../components/footer/footer";
 // data
 import { cardsItems } from "../data/cardsItemsData";
@@ -9,7 +10,6 @@ import { prepareCardsData } from "../utils/prepareCardsData";
 import Paragraphs from "../utils/paragraph";
 // assets
 import coffeeBg from "../assets/images/coffee-shop-bckgd-1920.png";
-import beansLogoBlack from "../assets/icons/Beans-logo-black.svg";
 import aboutBeans from "../assets/images/about-beans-img.png";
 // styles
 import "../pages/CoffeePage.scss";
@@ -22,8 +22,8 @@ const CoffeePage = () => {
   return (
     <>
       <Header
-        className={"coffee-header"}
         background={coffeeBg}
+        className={"coffee-header"}
         title="Our Coffee"
       />
       <div className="about-beans">
@@ -35,8 +35,7 @@ const CoffeePage = () => {
               alt="aboutBeans"
             />
             <div className="about-beans__row">
-              <h3 className="about-beans__title">About our beans</h3>
-              <img className="about-beans__logo" src={beansLogoBlack} alt="" />
+              <About className={"about-beans"} title="About our beans" />
               <Paragraphs ids={[1]} className="about-beans__paragraph" />
             </div>
           </div>
@@ -71,7 +70,12 @@ const CoffeePage = () => {
         <div className="coffee-cards__container">
           <div className="coffee-cards__items">
             {coffeeCards.map((card) => (
-              <Card key={card.id} data={card} className="coffee-item" classContainer="coffee-item__container" />
+              <Card
+                key={card.id}
+                data={card}
+                className="coffee-item"
+                classContainer="coffee-item__container"
+              />
             ))}
           </div>
         </div>

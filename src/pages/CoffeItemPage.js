@@ -1,35 +1,46 @@
 // component`
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
+import About from "../components/about/about";
 // data
 import { cardsItems } from "../data/cardsItemsData";
-// utils
-import Paragraphs from "../utils/paragraph";
 // assets
 import coffeeBg from "../assets/images/coffee-shop-bckgd-1920.png";
 
-const CoffeeItemPage = () => {
-   const coffeeItem = cardsItems[Math.floor(Math.random() * cardsItems.length)];
+// styles
+import "../pages/CoffeItemPage.scss";
 
-    return (
-        <>
-        <Header
-                className={"coffee-header"}
-                background={coffeeBg}
-                title="Our Coffee"
-              />
-            {/* <Header style={{ backgroundImage: `url(${coffeeBg})` }} /> */}
-            <div className="coffee-item-page" >
-                <div className="coffee-item-page__container" >
-  
-                    <h1>{coffeeItem.country}</h1>
-                    <img src={coffeeItem.src} alt={coffeeItem.alt} />
-                    <Paragraphs paragraphs={coffeeItem.description} />
-                </div>
+const CoffeeItemPage = () => {
+  const coffeeItem = cardsItems[Math.floor(Math.random() * cardsItems.length)];
+
+  return (
+    <>
+      <Header
+        background={coffeeBg}
+        className={"coffee-header"}
+        title="Our Coffee"
+      />
+      <div className="coffee-item-page">
+        <div className="coffee-item-page__container">
+          <div className="coffee-item-page__body">
+            
+            <img className="coffee-item-page__image" src={coffeeItem.srcSpecial} alt={coffeeItem.altSpecial} />
+            <div className="coffee-item-page__row">
+              <About className="coffee-item-page" title="About it" />
+              <h3 className="coffee-item-page__country">
+                {coffeeItem.country}
+              </h3>
+              <p className="coffee-item-page__description">{coffeeItem.description}</p>
+              <p className="coffee-item-page__price">
+                Price: <span>{coffeeItem.price}$</span>
+              </p>
             </div>
-            <Footer />
-        </>
-    );
-}
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
 export default CoffeeItemPage;

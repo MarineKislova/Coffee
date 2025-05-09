@@ -1,0 +1,66 @@
+.coffee-item-page {
+  &__container {
+    display: flex;
+    padding: 70px 0px 30px;
+    justify-content: center;
+  }
+
+  &__body {
+    display: flex;
+
+    gap: 55px;
+  }
+
+  &__image {
+    width: 392px;
+    height: 355px;
+    border-radius: 8px;
+      img {
+        width: 100%;
+        // height: 100%;
+        object-fit: contain;
+      }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 418px;
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  &__logo {
+    width: 22.22vh;
+    align-self: center;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  &__country {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__price {
+    font-size: 14px;
+    line-height: 20px;
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}

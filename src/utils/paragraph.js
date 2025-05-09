@@ -9,7 +9,7 @@ const Paragraphs = ({ ids = [], className = "" }) => {
   return (
     <>
       {filteredParagraphs.map((p) => (
-        <p key={p.id} className={className}>
+        <p key={p.id} className={`${className}__paragraph`}>
           {p.text}
         </p>
       ))}
