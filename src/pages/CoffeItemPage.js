@@ -4,13 +4,11 @@ import Footer from "../components/footer/footer";
 import About from "../components/about/about";
 // data
 import { cardsItems } from "../data/cardsItemsData";
-// assets
-import coffeeBg from "../assets/images/coffee-shop-bckgd-1920.png";
 
 // styles
 import "../pages/CoffeItemPage.scss";
 
-const CoffeeItemPage = () => {
+const CoffeeItemPage = ({coffeeBg}) => {
   const coffeeItem = cardsItems[Math.floor(Math.random() * cardsItems.length)];
 
   return (

@@ -13,7 +13,7 @@ import beansLogoWhite from "../assets/icons/Beans-logo-white.svg";
 // styles
 import "../pages/MainPage.scss";
 
-const MainPage = () => {
+const MainPage = ({mainBG}) => {
   const cards = prepareCardsData(cardsItems, {
     ids: [1, 4, 7],
     omitFields: ["description", "country"],
@@ -21,8 +21,8 @@ const MainPage = () => {
 
   return (
     <>
-      <header className="main-nav">
-        <div className="main-nav__container">
+      <header className="main-nav" >
+        <div className="main-nav__container" style={{backgroundImage: `url(${mainBG})`}}>
           <Nav />
           <div className="main-nav__body">
             <h1 className="main-nav__title">
@@ -46,8 +46,8 @@ const MainPage = () => {
       <div className="about-us">
         <div className="about-us__container">
           <About className={"about-us"} title="About Us" />
-          <Paragraphs ids={[1]} className="about-us__paragraph" />
-          <Paragraphs ids={[2]} className="about-us__paragraph" />
+          <Paragraphs ids={[1]} className="about-us" />
+          <Paragraphs ids={[2]} className="about-us" />
         </div>
       </div>
       <div className="card">

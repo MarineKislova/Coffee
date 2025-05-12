@@ -9,12 +9,11 @@ import { cardsItems } from "../data/cardsItemsData";
 import { prepareCardsData } from "../utils/prepareCardsData";
 import Paragraphs from "../utils/paragraph";
 // assets
-import coffeeBg from "../assets/images/coffee-shop-bckgd-1920.png";
 import aboutBeans from "../assets/images/about-beans-img.png";
 // styles
 import "../pages/CoffeePage.scss";
 
-const CoffeePage = () => {
+const CoffeePage = ({ coffeeBg }) => {
   const coffeeCards = prepareCardsData(cardsItems, {
     omitFields: ["description"],
   });
